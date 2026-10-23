@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Selected web development and academic projects by Alex Rivera.">
+  <title>Projects | Alex Rivera</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="logo">Alex<span>Rivera</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <h1>Projects</h1>
+        <p>Selected work demonstrating front-end skills, problem-solving, and clean code.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          At least three sample projects presented in a responsive card grid. Each includes a title,
+          description, visual placeholder, and simulated links.
+        </p>
+
+        <div class="card-grid">
+
+          <!-- Project 1 -->
+          <article class="card">
+            <div class="card-img" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Academic Task Planner</h3>
+              <p>
+                An interactive task management web app built with vanilla JavaScript. Supports adding,
+                completing, and deleting tasks with priority levels and due dates. Fully client-side
+                using arrays and DOM manipulation.
+              </p>
+              <div class="card-links">
+                <a href="planner.html" class="btn btn-primary btn-sm">Live Demo</a>
+                <a href="#" class="btn btn-outline btn-sm" onclick="return false;" title="Simulated GitHub link">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card">
+            <div class="card-img" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Responsive University Portal UI</h3>
+              <p>
+                A multi-page responsive front-end prototype for a student portal. Features sticky navigation,
+                full-width hero sections, accessible forms, and a consistent design system built with
+                Flexbox and CSS Grid.
+              </p>
+              <div class="card-links">
+                <a href="index.html" class="btn btn-primary btn-sm">Live Demo</a>
+                <a href="#" class="btn btn-outline btn-sm" onclick="return false;" title="Simulated GitHub link">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card">
+            <div class="card-img" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Personal Finance Tracker (Concept)</h3>
+              <p>
+                A conceptual single-page app for tracking simple income and expenses. Demonstrates
+                form handling, dynamic list rendering, basic calculations, and local state management
+                with pure JavaScript.
+              </p>
+              <div class="card-links">
+                <a href="#" class="btn btn-primary btn-sm" onclick="return false;" title="Simulated demo">Live Demo</a>
+                <a href="#" class="btn btn-outline btn-sm" onclick="return false;" title="Simulated GitHub link">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 (bonus) -->
+          <article class="card">
+            <div class="card-img" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Interactive Quiz App</h3>
+              <p>
+                A timed multiple-choice quiz interface with score tracking, progress indication,
+                and result summary. Built to practice event handling, state updates, and clean
+                component-like structure without a framework.
+              </p>
+              <div class="card-links">
+                <a href="#" class="btn btn-primary btn-sm" onclick="return false;" title="Simulated demo">Live Demo</a>
+                <a href="#" class="btn btn-outline btn-sm" onclick="return false;" title="Simulated GitHub link">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Alex Rivera — Student Portfolio</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <p class="footer-copy">&copy; 2026 Alex Rivera. Built with semantic HTML5, CSS &amp; vanilla JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
