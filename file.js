@@ -1,6 +1,6 @@
 (function () {
   // Initialize EmailJS
-  emailjs.init("TVOQWl_otlyxRQaJs");
+  emailjs.init("E0gZAy3xkLHwIRMam");
 
   var form = document.getElementById('contact-form');
   if (!form) return;
@@ -80,7 +80,7 @@
     submitBtn.disabled = true;
 
     // Send via EmailJS (form resets AFTER submission completes)
-    emailjs.sendForm("service_ga3i60j", "template_ys8m6j2", form)
+    emailjs.sendForm("service_33uxddd", "template_vv1tesg", form)
       .then(function () {
         if (success) {
           success.style.display = 'block';
