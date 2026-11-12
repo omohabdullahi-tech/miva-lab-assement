@@ -836,16 +836,6 @@ ul, ol {
   }
 }
 
-.loader-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0%;
-      height: 3px;
-      background-color: #1877f2;
-      z-index: 9999;
-      transition: width 0.3s ease, opacity 0.3s ease;
-    }
 
 @media (max-width: 480px) {
   .hero {
@@ -860,4 +850,19 @@ ul, ol {
   .card-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+
+
+.loader-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 6px; /* Temporarily thicker for testing */
+  background-color: #ff0000; /* Temporarily bright red */
+  z-index: 2147483647; /* Maximum possible z-index */
+  transition: width 0.3s ease, opacity 0.3s ease;
 }
