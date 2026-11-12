@@ -861,8 +861,8 @@ ul, ol {
   top: 0;
   left: 0;
   width: 0%;
-  height: 8px; /* Temporarily thicker for testing */
-  background-color: #ff0000; /* Temporarily bright red */
+  height: 7px; /* Temporarily thicker for testing */
+  background-color: #6B46C1; /* Temporarily bright red */
   z-index: 2147483647; /* Maximum possible z-index */
   transition: width 0.3s ease, opacity 0.3s ease;
 }
