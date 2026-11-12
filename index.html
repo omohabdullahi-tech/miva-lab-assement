@@ -116,48 +116,40 @@
 
   <script src="script.js"></script>
   <script>
-    class TopLoader {
-      constructor() {
-        this.bar = document.getElementById('top-loader');
-      }
+document.addEventListener('DOMContentLoaded', function() {
+  const bar = document.getElementById('top-loader');
+  if (!bar) return;
 
-      start() {
-        if (!this.bar) return;
-        this.bar.style.opacity = '1';
-        this.bar.style.width = '30%'; // Quick initial jump
-      }
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+    const target = link.getAttribute('target');
+
+    // Skip external links, new tabs, or anchor jumps (#)
+    if (
+      link.hostname !== window.location.hostname ||
+      target === '_blank' ||
+      (href && href.startsWith('#')) ||
+      e.metaKey || e.ctrlKey || e.shiftKey || e.altKey
+    ) {
+      return;
     }
 
-    const loader = new TopLoader();
+    // 1. Stop the browser from navigating away instantly
+    e.preventDefault();
 
-    // Global listener for all clicks on the document
-    document.addEventListener('click', function (e) {
-      // Find the closest anchor tag if a child element inside the link was clicked
-      const link = e.target.closest('a');
+    // 2. Trigger the loader animation
+    bar.style.opacity = '1';
+    bar.style.width = '70%';
 
-      if (!link) return;
-
-      const href = link.getAttribute('href');
-      const target = link.getAttribute('target');
-      const hostname = link.hostname;
-
-      // Skip rules:
-      // 1. External links (different domain)
-      // 2. Links opening in a new tab (target="_blank")
-      // 3. Anchor/hash links on the same page (e.g., href="#section")
-      // 4. Keyboard modifier shortcuts (Ctrl+Click, Cmd+Click to open in new tab)
-      if (
-        hostname !== window.location.hostname ||
-        target === '_blank' ||
-        (href && href.startsWith('#')) ||
-        e.metaKey || e.ctrlKey || e.shiftKey || e.altKey
-      ) {
-        return;
-      }
-
-      // Trigger the loader animation
-      loader.start();
-    });
-  </script>
+    // 3. Wait 300ms so the user actually sees the bar, then redirect manually
+    setTimeout(function() {
+      window.location.href = href;
+    }, 300);
+  });
+});
+    </script>
 </body>
 </html>
