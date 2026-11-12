@@ -115,5 +115,49 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    class TopLoader {
+      constructor() {
+        this.bar = document.getElementById('top-loader');
+      }
+
+      start() {
+        if (!this.bar) return;
+        this.bar.style.opacity = '1';
+        this.bar.style.width = '30%'; // Quick initial jump
+      }
+    }
+
+    const loader = new TopLoader();
+
+    // Global listener for all clicks on the document
+    document.addEventListener('click', function (e) {
+      // Find the closest anchor tag if a child element inside the link was clicked
+      const link = e.target.closest('a');
+
+      if (!link) return;
+
+      const href = link.getAttribute('href');
+      const target = link.getAttribute('target');
+      const hostname = link.hostname;
+
+      // Skip rules:
+      // 1. External links (different domain)
+      // 2. Links opening in a new tab (target="_blank")
+      // 3. Anchor/hash links on the same page (e.g., href="#section")
+      // 4. Keyboard modifier shortcuts (Ctrl+Click, Cmd+Click to open in new tab)
+      if (
+        hostname !== window.location.hostname ||
+        target === '_blank' ||
+        (href && href.startsWith('#')) ||
+        e.metaKey || e.ctrlKey || e.shiftKey || e.altKey
+      ) {
+        return;
+      }
+
+      // Trigger the loader animation
+      loader.start();
+    });
+  </script>
 </body>
 </html>
