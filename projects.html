@@ -152,5 +152,41 @@
   </footer>
 
   <script src="script.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const bar = document.getElementById('top-loader');
+  if (!bar) return;
+
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+    const target = link.getAttribute('target');
+
+    // Skip external links, new tabs, or anchor jumps (#)
+    if (
+      link.hostname !== window.location.hostname ||
+      target === '_blank' ||
+      (href && href.startsWith('#')) ||
+      e.metaKey || e.ctrlKey || e.shiftKey || e.altKey
+    ) {
+      return;
+    }
+
+    // 1. Stop the browser from navigating away instantly
+    e.preventDefault();
+
+    // 2. Trigger the loader animation
+    bar.style.opacity = '1';
+    bar.style.width = '70%';
+
+    // 3. Wait 300ms so the user actually sees the bar, then redirect manually
+    setTimeout(function() {
+      window.location.href = href;
+    }, 300);
+  });
+});
+    </script>
 </body>
 </html>
