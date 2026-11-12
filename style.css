@@ -836,6 +836,17 @@ ul, ol {
   }
 }
 
+.loader-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background-color: #1877f2;
+      z-index: 9999;
+      transition: width 0.3s ease, opacity 0.3s ease;
+    }
+
 @media (max-width: 480px) {
   .hero {
     padding: 3.5rem 0 4rem;
